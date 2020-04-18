@@ -1,0 +1,7 @@
+/TF_AZURE_EXAMPLE/.terraform/
+/TF_AZURE_EXAMPLE/terraform.tfstate
+/TF_AZURE_EXAMPLE/terraform.tfstate.backup
+
+/TF_AZURE_VM/.terraform/
+/TF_AZURE_VM/terraform.tfstate
+/TF_AZURE_VM/terraform.tfstate.backup
