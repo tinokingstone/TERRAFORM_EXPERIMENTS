@@ -1,7 +1,12 @@
-/TF_AZURE_EXAMPLE/.terraform/
-/TF_AZURE_EXAMPLE/terraform.tfstate
-/TF_AZURE_EXAMPLE/terraform.tfstate.backup
+TERRAFORM_EXPERIMENTS/TF_AZURE_EXAMPLE/.terraform/
+TERRAFORM_EXPERIMENTS/TF_AZURE_EXAMPLE/terraform.tfstate
+TERRAFORM_EXPERIMENTS/TF_AZURE_EXAMPLE/terraform.tfstate.backup
 
-/TF_AZURE_VM/.terraform/
-/TF_AZURE_VM/terraform.tfstate
-/TF_AZURE_VM/terraform.tfstate.backup
+TERRAFORM_EXPERIMENTS/TF_AZURE_VM/.terraform/
+TERRAFORM_EXPERIMENTS/TF_AZURE_VM/terraform.tfstate
+TERRAFORM_EXPERIMENTS/TF_AZURE_VM/terraform.tfstate.backup
+
+TERRAFORM_EXPERIMENTS/TF_AZURE_ADVANCED/.terraform/
+TERRAFORM_EXPERIMENTS/TF_AZURE_ADVANCED/terraform.tfstate
+TERRAFORM_EXPERIMENTS/TF_AZURE_ADVANCED/terraform.tfstate.backup
+
