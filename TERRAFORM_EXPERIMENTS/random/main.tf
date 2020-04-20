@@ -2,18 +2,18 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "dev_environment" {
-  name     = "dev_environment"
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
   location = "uk south"
 }
 
-module "dev_environment" {
+module "linuxservers" {
   source                        = "Azure/compute/azurerm"
-  resource_group_name           = azurerm_resource_group.dev_environment.name
-  vm_hostname                   = "DevelopmentVm"
+  resource_group_name           = azurerm_resource_group.example.name
+  vm_hostname                   = "myvm"
   nb_public_ip                  = 0
   remote_port                   = "22"
-  nb_instances                  = 3
+  nb_instances                  = 1
   vm_os_publisher               = "Canonical"
   vm_os_offer                   = "UbuntuServer"
   vm_os_sku                     = "18.04-LTS"
@@ -40,15 +40,16 @@ module "dev_environment" {
 module "network" {
   source              = "Azure/network/azurerm"
   version             = "3.0.1"
-  resource_group_name = azurerm_resource_group.dev_environment.name
+  resource_group_name = azurerm_resource_group.example.name
   subnet_prefixes     = ["10.0.1.0/24"]
 }
 
-output "dev_environment_private_ips" {
-  value = module.dev_environment.network_interface_private_ip
+output "linux_vm_private_ips" {
+  value = module.linuxservers.network_interface_private_ip
 }
 
-output "dev_environment_public_ip" {
-  value = module.dev_environment.public_ip_address
+
+output "linux_vm_public_ip" {
+  value = module.linuxservers.public_ip_address
 }
 
